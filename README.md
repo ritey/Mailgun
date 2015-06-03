@@ -88,7 +88,7 @@ In your .env file you must specify the `from` details, your Mailgun `api key` an
 
 MAILGUN_FROM_ADDRESS=
 MAILGUN_FROM_NAME=
-MAILGUN_FROM_NAME=
+MAILGUN_REPLY_TO=
 MAILGUN_API_KEY_PRIVATE=
 MAILGUN_API_KEY_PUBLIC=
 MAILGUN_DOMAIN=
