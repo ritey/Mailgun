@@ -77,12 +77,19 @@ Add the service provider to the `providers` array in your `app/config/app.php` f
 
 ## Configuration ##
 Before you can start using the package we need to set some configurations.
-To do so you must first publish the config file, you can do this with the following `artisan` command.
+To do so you must first publish the config file, you can do this with the following `artisan` command in Laravel 5
 
 ```bash
 php artisan vendor:publish bogardo/mailgun
 ```
-After the config file has been published you can find it at: `app/config/bogardo.mailgun.php`
+
+or <= Laravel 4.2
+
+```bash
+php artisan config:publish bogardo/mailgun bogardo/mailgun
+```
+
+After the config file has been published you can find it at for Laravel 5: `app/config/bogardo.mailgun.php` and `app/config/packages/bogardo/mailgun/config.php` for older Laravel versions.
 
 In your .env file you must specify the `from` details, your Mailgun `api key` and the Mailgun `domain`.
 
@@ -97,6 +104,8 @@ MAILGUN_DOMAIN=
 MAILGUN_FORCE_FROM_ADDRESS=
 MAILGUN_CATCHALL=
 MAILGUN_TEST_MODE=
+
+In Laravel 4.2 and older you must specify the `from` details, your Mailgun `api key` and the Mailgun `domain` in the package config file.
 
 ## Usage ##
 
