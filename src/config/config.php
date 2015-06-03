@@ -18,7 +18,7 @@ return array(
 	 * Global reply-to e-mail address
 	 *
 	 */
-	'reply_to' => env('MAILGUN_FROM_NAME',''),
+	'reply_to' => env('MAILGUN_REPLY_TO',''),
 
 
 	/**

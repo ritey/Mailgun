@@ -425,7 +425,7 @@ class Message
 	 */
 	protected function setConfigReplyTo()
 	{
-		$replyTo = Config::get('mailgun::reply_to');
+		$replyTo = Config::get('bogardo.mailgun.reply_to');
 		if ($replyTo) {
 			$this->replyTo($replyTo);
 		}
@@ -436,7 +436,7 @@ class Message
 	 */
 	protected function setNativeSend()
 	{
-		if (Config::get('mailgun::force_from_address')) {
+		if (Config::get('bogardo.mailgun.force_from_address')) {
 			$this->{'o:native-send'} = 'yes';
 		}
 	}
@@ -446,7 +446,7 @@ class Message
 	 */
 	protected function setTestMode()
 	{
-		if (Config::get('mailgun::testmode')) {
+		if (Config::get('bogardo.mailgun.testmode')) {
 			$this->{'o:testmode'} = true;
 		}
 	}
@@ -462,7 +462,7 @@ class Message
 	 */
 	protected function checkCatchAll($email)
 	{
-		$catchAllMail = Config::get('mailgun::catch_all');
+		$catchAllMail = Config::get('bogardo.mailgun.catch_all');
 		if ($catchAllMail) {
 			$extractedEmail = $this->getEmailFromString($email);
 			return str_replace($extractedEmail, $catchAllMail, $email);
