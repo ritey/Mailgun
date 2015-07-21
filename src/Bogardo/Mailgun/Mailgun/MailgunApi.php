@@ -18,7 +18,7 @@ abstract class MailgunApi {
         if (!$this->mailgun || $init === true) {
 
             if (!$apiKey) {
-                $apiKey = Config::get('mailgun::api_key');
+                $apiKey = Config::get('bogardo.mailgun.api_key');
             }
 
             $this->mailgun = new MailgunCore($apiKey);
@@ -48,4 +48,4 @@ abstract class MailgunApi {
     }
 
 
-} 
+}

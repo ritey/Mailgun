@@ -1,6 +1,6 @@
 {
-    "name": "bogardo/mailgun",
-    "description": "A laravel 4.1 wrapper for sending mail via the Mailgun API in Laravel 4 style",
+    "name": "ritey/mailgun",
+    "description": "A laravel 5 wrapper for sending mail via the Mailgun API in Laravel style",
     "type": "laravel-package",
     "license": "MIT",
     "keywords": [
@@ -12,11 +12,15 @@
         {
             "name": "Bogardo",
             "email": "chrisbogaards@gmail.com"
+        },
+        {
+            "name": "ritey",
+            "email": "dave@ritey.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.*",
+        "illuminate/support": "5.*",
         "mailgun/mailgun-php": "1.7.*",
         "nesbot/carbon": "~1.0"
     },
