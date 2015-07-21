@@ -1,5 +1,5 @@
 {
-    "name": "bogardo/mailgun",
+    "name": "ritey/mailgun",
     "description": "A laravel 5 wrapper for sending mail via the Mailgun API in Laravel style",
     "type": "laravel-package",
     "license": "MIT",
@@ -12,6 +12,10 @@
         {
             "name": "Bogardo",
             "email": "chrisbogaards@gmail.com"
+        },
+        {
+            "name": "ritey",
+            "email": "dave@ritey.com"
         }
     ],
     "require": {
