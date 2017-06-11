@@ -31,13 +31,10 @@ class MailgunServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app->singleton(Mailgun::class, function($app) {
-			return new Mailgun($app['view']);
-		});
+		$app = $this->app ?: app();
 
-		$this->app->booting(function(){
-			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('Mailgun', 'Bogardo\Mailgun\Facades\Mailgun');
+		$this->app->singleton(Mailgun::class, function() use ($app) {
+			return new Mailgun($app['view']);
 		});
 	}
 
