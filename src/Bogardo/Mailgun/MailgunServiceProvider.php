@@ -36,6 +36,8 @@ class MailgunServiceProvider extends ServiceProvider
 		$this->app->singleton(Mailgun::class, function() use ($app) {
 			return new Mailgun($app['view']);
 		});
+
+		$this->app->alias('Mailgun', 'Bogardo\Mailgun\Facades\Mailgun');
 	}
 
 	/**
