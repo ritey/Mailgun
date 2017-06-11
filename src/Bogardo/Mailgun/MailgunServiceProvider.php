@@ -33,11 +33,11 @@ class MailgunServiceProvider extends ServiceProvider
 	{
 		$app = $this->app ?: app();
 
-		$this->app->singleton(Mailgun::class, function() use ($app) {
+		$this->app->singleton(Mailgun::class, function($app) {
 			return new Mailgun($app['view']);
 		});
 
-		$this->app->alias('Mailgun', 'Bogardo\Mailgun\Facades\Mailgun');
+		$this->app->alias('Mailgun', Mailgun::class);
 	}
 
 	/**
@@ -47,7 +47,7 @@ class MailgunServiceProvider extends ServiceProvider
 	 */
 	public function provides()
 	{
-		return array('mailgun');
+		return array('mailgun',Mailgun::class);
 	}
 
 }
